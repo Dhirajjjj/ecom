@@ -10,7 +10,7 @@
     </nav>
   </header>
 
-  <div class="mt-20 max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- <div class="mt-20 max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
       <div class="lg:col-span-3">
         <p class="block text-4xl font-bold text-gray-700 sm:text-4xl md:text-5xl lg:text-6xl">Styles like never seen before.</p>
@@ -62,13 +62,28 @@
         <img class="w-full rounded-xl" src="https://images.unsplash.com/photo-1615615228002-890bb61cac6e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image Description">
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
 
 
 
 <div *ngIf="isAdminLoggedIn">
-  <mat-toolbar color="primary" class="navbar">
+  <header class="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-4">
+    <nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
+      <a class="flex-none text-xl font-semibold text-green-600" href="#">ProspeX</a>
+      <div class="flex flex-row items-center gap-5 mt-5 sm:justify-end sm:mt-0 sm:ps-5">
+        <button class="font-medium text-gray-600" routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</button>
+        <button class="font-medium text-gray-600 hover:text-gray-400" routerLink="/admin/category" routerLinkActive="active">Category</button>
+        <button class="font-medium text-gray-600 hover:text-gray-400" routerLink="/admin/product" routerLinkActive="active">Product</button>
+        <button class="font-medium text-gray-600 hover:text-gray-400" routerLink="/admin/orders" routerLinkActive="active">Orders</button>
+        <button class="font-medium text-gray-600 hover:text-gray-400" routerLink="/admin/post-coupon" routerLinkActive="active">Post Coupon</button>
+        <button class="font-medium text-gray-600 hover:text-gray-400" routerLink="/admin/coupons" routerLinkActive="active">Coupons</button>
+        <button class="font-medium text-gray-600 hover:text-gray-400" routerLinkActive="/login" (click)="logout()">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- <mat-toolbar color="primary" class="navbar">
     <span class="navbar-brand">Book Haven</span>
     <span class="spacer"></span>
     <button mat-button routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</button>
@@ -78,33 +93,33 @@
     <button mat-button routerLink="/admin/post-coupon" routerLinkActive="active">Post Coupon</button>
     <button mat-button routerLink="/admin/coupons" routerLinkActive="active">Coupons</button>
     <button mat-button routerLinkActive="active" (click)="logout()">Logout</button>
-  </mat-toolbar>
-  <!-- <header class="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-4">
-    <nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
-      <a class="flex-none text-xl font-semibold" href="#">Brand</a>
-      <div class="flex flex-row items-center gap-5 mt-5 sm:justify-end sm:mt-0 sm:ps-5">
-        <a class="font-medium text-blue-500" href="#" aria-current="page">Landing</a>
-        <a class="font-medium text-gray-600 hover:text-gray-400" href="#">Account</a>
-        <a class="font-medium text-gray-600 hover:text-gray-400" href="#">Work</a>
-        <a class="font-medium text-gray-600 hover:text-gray-400" href="#">Blog</a>
-      </div>
-    </nav>
-  </header> -->
+  </mat-toolbar> -->
  </div>
 
 
 
   <div *ngIf="isCustomerLoggedIn">
-    <mat-toolbar color="primary" class="navbar">
+
+    <header class="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-4">
+      <nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
+        <a class="flex-none text-xl font-semibold text-green-600" href="#">ProspeX</a>
+        <div class="flex flex-row items-center gap-5 mt-5 sm:justify-end sm:mt-0 sm:ps-5">
+          <button class="font-medium text-gray-600" routerLink="/customer/dashboard" routerLinkActive="active">Dashboard</button>
+          <button class="font-medium text-gray-600 hover:text-gray-400" routerLink="/customer/cart" routerLinkActive="active">Cart</button>
+          <button class="font-medium text-gray-600 hover:text-gray-400" routerLink="/customer/my_orders" routerLinkActive="active">Orders</button>
+          <button class="font-medium text-gray-600 hover:text-gray-400" routerLinkActive="active" (click)="logout()">Logout</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- <mat-toolbar color="primary" class="navbar">
       <span class="navbar-brand">Book Haven</span>
       <span class="spacer"></span>
     <button mat-button routerLink="/customer/dashboard" routerLinkActive="active">Dashboard</button>
     <button mat-button routerLink="/customer/cart" routerLinkActive="active">Cart</button>
     <button mat-button routerLink="/customer/my_orders" routerLinkActive="active">Orders</button>
-    <!-- <button mat-button routerLink="/customer/wishlist" routerLinkActive="active">Wishlist</button> -->
-    <!-- <button mat-button routerLink="/customer/profile" routerLinkActive="active">Profile</button> -->
     <button mat-button  routerLinkActive="active" (click)="logout()">Logout</button>
-    </mat-toolbar>
+    </mat-toolbar> -->
 </div>
 
 <router-outlet></router-outlet>
